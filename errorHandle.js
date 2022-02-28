@@ -1,4 +1,5 @@
 function errorHandle(res) {
+    //原本的吃不到所以再帶一次
     const headers = {
         'Access-Control-Allow-Headers': 'Content-Type, Authorization, Content-Length, X-Requested-With',
         'Access-Control-Allow-Origin': '*',
@@ -12,5 +13,5 @@ function errorHandle(res) {
     }));
     res.end();
 }
-
+//node.js都要經過這個匯出才能給別的檔案用
 module.exports = errorHandle;
