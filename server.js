@@ -18,7 +18,7 @@ const requestListener = (req, res) => {
         res.writeHead(200,headers);
         res.write(JSON.stringify({
             "status": "success",
-            "data": [todos], 
+            "data": todos, 
         }));
         res.end();
     }else if(req.url=="/todos" && req.method == "POST"){
@@ -49,7 +49,7 @@ const requestListener = (req, res) => {
         res.writeHead(200,headers);
         res.write(JSON.stringify({
             "status": "success",
-            "data": [todos], 
+            "data": todos, 
         }));
         res.end();
     }else if(req.url.startsWith("/todos/") && req.method == "DELETE"){
@@ -60,7 +60,7 @@ const requestListener = (req, res) => {
             res.writeHead(200,headers);
             res.write(JSON.stringify({
                 "status": "success",
-                "data": [todos], 
+                "data": todos, 
             }));
             res.end();
         }else{
@@ -77,7 +77,7 @@ const requestListener = (req, res) => {
                     res.writeHead(200,headers);
                     res.write(JSON.stringify({
                         "status": "success",
-                        "data": [todos], 
+                        "data": todos, 
                     }));
                     res.end();
                 }else{
